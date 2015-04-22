@@ -9,7 +9,4 @@ elixir(function(mix) {
     mix.copy('resources/assets/bower_components/angular/angular.min.js', 'public/vendor/angular.js');
     mix.copy('resources/assets/bower_components/modernizr/modernizr.js', 'public/vendor/modernizr.js');
     mix.copy('resources/assets/bower_components/normalize.css/normalize.css', 'public/vendor/normalize.css');
-
-    //version files
-    mix.version(['css/site.css', 'js/site.js']);
 });

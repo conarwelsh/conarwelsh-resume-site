@@ -11,9 +11,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="{{ asset('vendor/normalize.css') }}">
+        <link rel="stylesheet" href="/vendor/normalize.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{{ elixir('css/site.css') }}">
+        <link rel="stylesheet" href="/css/site.css">
 
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -42,8 +42,8 @@
         @include('partials._resume')
         @include('partials._contact')
 
-        <script src="{{ asset('iconic-1.8.0/js/iconic.min.js') }}"></script>
-        <script src="{{ elixir('js/site.js') }}"></script>
+        <script src="/iconic-1.8.0/js/iconic.min.js"></script>
+        <script src="/js/site.js"></script>
 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

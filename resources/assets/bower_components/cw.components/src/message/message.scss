@@ -1,0 +1,12 @@
+@include component(message){
+	padding: 1rem 2rem;
+
+	@include option(center){
+		text-align: center;
+	}
+
+	@include option(success){
+		background-color: getcolor('green');
+		color: #fff;
+	}
+}

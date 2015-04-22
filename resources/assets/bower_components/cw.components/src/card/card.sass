@@ -1,0 +1,51 @@
++component(card)
+	display: block
+	float: left
+	box-shadow: 0 1px 3px rgba(0,0,0,0.4)
+	border-radius: 5px
+	overflow: hidden
+
+	+part(frame)
+		display: inline-block
+		position: relative
+		width: 100%
+		overflow: hidden
+
+	+part(sizer)
+		margin-top: 100%
+
+		& + .card__image
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+
+	+part(image)
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+
+	+part(content)
+		padding: 1rem
+		margin-top: -9px
+
+	+option(fluid)
+		width: 100%
+
+	+option(two)
+		width: 48%
+		margin: 0 1%
+
+	+option(three)
+		width: 33.33333%
+
+	+option(four)
+		width: 23%
+		margin: 0 1%
+		
+	+option(five)
+		width: 20%
+
+	img
+		max-width: 100%

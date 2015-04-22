@@ -1,0 +1,38 @@
+@include component(ripple) {
+	position: relative;
+	overflow: hidden;
+
+	@include part(ripple) {
+		position: absolute;
+		background: rgba(0,0,0,0.1);
+		border-radius: 100%;
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
+		pointer-events: none;
+	}
+
+	@include option(start-ripple) {
+		@include part(ripple) {
+			-webkit-animation: ripple .5s ease-out;
+				animation: ripple .5s ease-out;
+		}
+	}
+}
+
+
+@-webkit-keyframes ripple {
+  to {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  to {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

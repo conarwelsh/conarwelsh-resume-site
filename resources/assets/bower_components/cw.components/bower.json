@@ -1,0 +1,27 @@
+{
+  "name": "conarwelsh/components",
+  "homepage": "https://github.com/conarwelsh/components",
+  "_release": "6a14abf490",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6a14abf490d662bea2b79f4442ddaf7ad7fe63d8"
+  },
+  "_source": "git@github.com:conarwelsh/components.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:conarwelsh/components.git",
+  "version": "0.0.0",
+  "authors": [
+    "Conar Welsh <conar@sellwell.io>"
+  ],
+  "description": "Web Components",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ]
+}

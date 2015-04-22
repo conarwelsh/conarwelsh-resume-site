@@ -1,0 +1,26 @@
+{
+  "name": "jqlite",
+  "version": "1.1.1",
+  "authors": [
+    "bfattori@gmail.com"
+  ],
+  "description": "A jQuery replacement for Blackberry and other limited mobile devices",
+  "main": "jqlite.1.1.1.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "jquery",
+    "lite",
+    "jqlite"
+  ],
+  "license": "MIT",
+  "homepage": "https://code.google.com/p/jqlite/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

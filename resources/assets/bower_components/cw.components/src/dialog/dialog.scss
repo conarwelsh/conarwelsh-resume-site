@@ -1,0 +1,96 @@
+/**
+ * # Dialog
+ *
+ * There is no javascript required for this component.
+ * 
+ * The modal uses a checkbox to determine if it is open or closed, so the entire
+ * element is contained within its own button, keeping scopes very clean, and
+ * avoiding the need to deal with templates, modules and scoping
+ *
+ * @example
+	<div class="dialog">
+		<input id="dialog" type="checkbox" name="dialog" tabindex="1">
+		<label class="Button --primary Ripple" for="dialog">Launch dialog</label>
+		<div class="dialog__overlay">
+			<div class="dialog__box">
+				<label for="dialog">&#10006;</label>
+				<h2>dialog Title</h2>
+				<p>dialog Content</p>
+			</div>
+		</div>
+	</div>
+ *
+ */
+@include component(dialog){
+	display: block;
+	padding: 0 1em;
+	width: 100%;
+
+	> label {
+		@extend .button
+	}
+
+	> input {
+		position: relative;
+		left: 50%;
+		top: 50%;
+		z-index: -10;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		-o-appearance: none;
+		appearance: none;
+	}
+
+	> input:checked ~ .dialog__overlay {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+		-webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+		transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+		z-index: map-get($zIndexes, 'dialog');
+	}
+
+	@include part(overlay){
+		background: black;
+		bottom: 0;
+		left: 0;
+		position: fixed;
+		right: 0;
+		text-align: center;
+		top: 0;
+		z-index: -800;
+
+		opacity: 0;
+		overflow: hidden;
+		-webkit-transform: scale(0.5);
+		-ms-transform: scale(0.5);
+		transform: scale(0.5);
+		-webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+		transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);	
+	}
+
+	@include part(box) {
+		padding: 1em .75em;
+		position: relative;
+		margin: 1em auto;
+		max-width: 500px;
+		width: 90%;
+	}
+
+	@include part(close) {
+		background-color: $primary-color;
+		border-radius: 50%;
+		color: black;
+		cursor: pointer;
+		display: inline-block;
+		height: 1.5em;
+		line-height: 1.5em;
+		position: absolute;
+		right: .5em;
+		top: .5em;
+		width: 1.5em;
+		z-index: 9999999;
+	}
+}

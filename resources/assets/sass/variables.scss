@@ -1,0 +1,59 @@
+// Grid
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: auto,
+  container-position: center,
+  columns: 12,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: content-box,
+  last-flow: to,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+
+// Ratios
+$minor-second-ratio: 1.067;
+$major-second-ratio: 1.125;
+$minor-third-ratio: 1.2;
+$major-third-ratio: 1.25;
+$perfect-fourth-ratio: 1.333;
+$augmented-fourth-ratio: 1.414;
+$perfect-fifth-ratio: 1.5;
+$golden-ratio: 1.618;
+
+// breakpoints
+$break-xs: 320px;
+$break-s: 20em;
+$break-m: 40em;
+$break-l: 60em;
+$break-xl: 80em;
+$break-xxl: 100em;
+
+// Colors
+$dark-color: #333;
+$light-color: #fff;
+$bg-color: #F7F7F7;
+$primary-color: getcolor('cyan');
+
+// Typography
+$font-family: 'Open Sans', 'Helvetica Neue', sans-serif !default;
+$font-weight: 300;
+// $line-height: 1.45;
+$line-height: 2;
+$placeholder-color: #ccc;
+$font-color: $dark-color;

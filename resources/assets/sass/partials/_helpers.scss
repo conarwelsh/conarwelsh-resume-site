@@ -1,0 +1,46 @@
+/**
+ |------------------------------------------------------------------------
+ | Helpers
+ |------------------------------------------------------------------------
+ */
+@include tweak(text-right){
+	text-align: right;
+}
+@include tweak(text-left){
+	text-align: left;
+}
+@include tweak(text-center){
+	text-align: center;
+}
+@include tweak(text-muted){
+	color: #ccc;
+}
+
+@include tweak(float-right){
+	float: right;
+}
+@include tweak(float-left){
+	float: left;
+}
+@include tweak(float-none){
+	float: none;
+}
+
+@include tweak(cf){
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.primary-bg {
+  background-color: $primary-color;
+  color: #fff;
+}
+.primary-border {
+  border-color: $primary-color;
+}
+.primary-color {
+  color: $primary-color;
+}

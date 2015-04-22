@@ -1,0 +1,171 @@
+<html>
+<head>
+	<!-- Locks Web-Kit down on iPhone and Android, setting the
+		  initial view to occupy the entire screen and not allowing
+		  the user to scale the viewport. -->
+	<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+
+	<!-- jQuery lite (JQLite) -->
+	<script src="jqlite.1.1.1.min.js" type="text/javascript"></script>
+
+	<!-- jQAnimation extension -->
+	<script src="extensions/jq.animation.min.js" type="text/javascript"></script>
+
+
+	<style type="text/css">
+		body {
+			font: 10pt Arial,Helvetica,Sans-serif;
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+
+		div.showUp {
+			background: #00f;
+			color: white;
+			font-weight: bold;
+			display:none;
+			width: 120px;
+			height: 120px;
+			border: 2px solid #aaf;
+			margin-top: 10px;
+		}
+
+		div.button {
+			border: 1px solid;
+			background: silver;
+			padding: 8px;
+			display: inline-block;
+			cursor: pointer;
+			margin-right: 15px;
+		}
+
+		div.grower,
+		div.mover {
+			background: #f00;
+			color: white;
+			font-weight: bold;
+			width: 120px;
+			height: 120px;
+			border: 2px solid #faa;
+			margin-top: 10px;
+			position: relative;
+		}
+
+		div.expander {
+			background: #ff0;
+			color: black;
+			font-size: 14px;
+			margin-top: 10px;
+			border: 1px solid;
+			display: inline-block;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("div.button1").click(function() {
+				$("div.showUp").show(3000);
+			});
+			$("div.button2").click(function() {
+				$("div.showUp").hide(1000);
+			});
+
+			$("div.button3").click(function() {
+				$("div.mover").animate({
+					left: "+=80"
+				});
+			});
+			$("div.button4").click(function() {
+				$("div.mover").animate({
+					left: "-=80"
+				});
+			});
+
+			$("div.button5").click(function() {
+				$("div.expander").animate({
+					fontSize: "24px"
+				});
+			});
+			$("div.button6").click(function() {
+				$("div.expander").animate({
+					fontSize: "14px"
+				});
+			});
+
+			$("div.button7").click(function() {
+				$("div.grower").animate({
+					width: "240px"
+				}).animate({
+					height: "240px"
+				});
+			});
+			$("div.button8").click(function() {
+				$("div.grower").animate({
+					width: "120px"
+				}).animate({
+					height: "120px"
+				});
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+	<h1>jQAnimation - jQuery FX library extension</h1>
+	<p>
+		The following is a test of extending jQLite with the jQuery
+		animation libraries.
+	</p>
+
+	<div class="button button1">
+		Show Box
+	</div>
+	<div class="button button2">
+		Hide Box
+	</div>
+	<div class="showUp">
+		Are we visible yet?
+	</div>
+
+	<hr/>
+
+	<div class="button button3">
+		Move Right
+	</div>
+	<div class="button button4">
+		Move Left
+	</div>
+	<div class="mover">
+		Am I moving Yet?
+	</div>
+
+	<hr/>
+
+	<div class="button button5">
+		Expand
+	</div>
+	<div class="button button6">
+		Shrink
+	</div> <br/>
+	<div class="expander">
+		Getting Bigger?
+	</div>
+
+	<hr/>
+
+	<div class="button button7">
+		Bigger
+	</div>
+	<div class="button button8">
+		Smaller
+	</div> <br/>
+	<div class="grower">
+		Width &amp; Height
+	</div>
+
+	<hr/>
+	<a href="index.html">&lt;&lt;&nbsp;Back to demo page</a>
+</body>
+</html>

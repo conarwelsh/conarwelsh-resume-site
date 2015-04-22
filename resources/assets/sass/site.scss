@@ -1,0 +1,37 @@
+/**
+ |------------------------------------------------------------------------
+ | Mixins and Variables
+ |------------------------------------------------------------------------
+ */
+@import '../bower_components/csstyle/csstyle';
+@import '../bower_components/susy/sass/susy';
+@import '../bower_components/compass-breakpoint/stylesheets/breakpoint';
+
+@import '../bower_components/cw.components/src/colors/colors';
+@import 'variables';
+
+
+/**
+ |------------------------------------------------------------------------
+ | Global
+ |------------------------------------------------------------------------
+ */
+html, body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@import 'partials/typography';
+@import 'partials/helpers';
+@import 'partials/layout';
+@import 'partials/welcome';
+@import 'partials/resume';
+@import 'partials/contact';
+@import 'partials/icons';

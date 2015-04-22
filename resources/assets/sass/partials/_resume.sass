@@ -1,0 +1,163 @@
+/**
+ |------------------------------------------------------------------------
+ | Resume
+ |------------------------------------------------------------------------
+ */
+#profile 
+    header
+        padding-bottom: 20px
+
+    img 
+        display: block
+        width: 150px
+        border-radius: 50%
+        margin: 0 auto
+
+    h2, .lead, .social
+        text-align: center
+        
+    +breakpoint(600px)
+        img
+            margin-right: 2rem
+            float: left
+
+        h2, .lead, .social
+            text-align: left
+
+#resume 
+    position: relative
+    z-index: 1000
+    width: 100%
+    min-height: 100%
+    padding: 3rem 0
+    background-color: #fff
+    color: #333
+
+    .container 
+        width: 80%
+        max-width: 1200px
+        margin: 0 auto
+    
+    +breakpoint(850px)
+        .left 
+            width: span(6)
+            float: left
+            margin-right: gutter()
+
+            .feature 
+                padding-right: 3.5rem
+
+        .right 
+            width: span(6)
+            float: left
+    
+
+    h5 
+        border-bottom: 1px solid #333
+        padding-bottom: 5px
+        padding-top: 30px
+    
+    .resume-actions
+        text-align: center
+        margin-bottom: 2rem
+
+        a
+            text-decoration: none
+
+    +breakpoint(650px)
+        .resume-actions
+            float: right
+
+    .feature 
+        position: relative
+
+        table 
+            th 
+                padding: 0 3rem 0 0
+                color: #aaa
+                font-weight: 300
+            
+        
+    
+
+    .timeline 
+        .item 
+            position: relative
+            border: 1px solid transparent
+            margin-top: -2px
+            padding-left: 20px
+            padding-top: 20px
+
+            &:before 
+                content: ''
+                position: absolute
+                width: 2px
+                background: #333
+                top: 0px
+                left: 0px
+                bottom: 0px
+
+            .date 
+                color: #ccc
+                font-size: 0.8em
+                text-transform: uppercase
+
+                .iconic
+                    fill: #aaa
+                    stroke: #aaa
+                    height: 1em
+                    width: 1em
+
+                &:before 
+                    content: ''
+                    position: absolute
+                    width: 6px
+                    height: 6px
+                    border-radius: 50%
+                    border: 2px solid getcolor('cyan', '700')
+                    background: $primary-color
+                    left: -4px
+                    top: 38px
+
+
+    ul.tags, ul.social 
+        list-style-type: none
+        margin: 0
+        padding: 0
+
+        li 
+            @extend .\+text-muted
+            display: inline-block
+            margin: 0
+        
+    
+
+    ul.tags 
+        li 
+            width: 27%
+            padding: 0
+
+    ul.social 
+        li 
+            padding: 0 1rem
+            color: #aaa
+
+.print-only
+    display: none
+
+@media print
+    .print-only
+        display: block
+    .no-print
+        display: none
+        visibility: hidden
+        height: 0
+        width: 0
+
+    #profile
+        header
+            padding-bottom: 0
+
+    #resume
+        .timeline .item
+            padding-top: 10px

@@ -1,0 +1,27 @@
+{
+  "name": "conarwelsh",
+  "version": "0.0.0",
+  "homepage": "https://github.com/conarwelsh/conarwelsh",
+  "authors": [
+    "Conar Welsh <conar@sellwell.io>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "angular": "~1.3.15",
+    "modernizr": "~2.8.3",
+    "normalize.css": "~3.0.3",
+    "compass-breakpoint": "~2.5.0",
+    "susy": "~2.2.2",
+    "csstyle": "~1.3.1",
+    "cw.components": "git@github.com:conarwelsh/components.git",
+    "jqlite": "~1.1.1"
+  }
+}

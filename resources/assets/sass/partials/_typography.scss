@@ -1,0 +1,149 @@
+/**
+ |------------------------------------------------------------------------
+ | Typography
+ |------------------------------------------------------------------------
+ */
+html {
+  font-size: 12px;
+}
+
+@include breakpoint(600px){
+  html {
+    font-size: 14px;
+  }
+}
+
+@include breakpoint(1400px){
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $font-color;
+  font-size: 1rem;
+}
+
+p {
+	font-size: 1rem;
+  margin: 0.5em 0 1em;
+
+  &.lead {
+    font-size: 1.25rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1rem * $augmented-fourth-ratio * $augmented-fourth-ratio * $augmented-fourth-ratio * $augmented-fourth-ratio;
+
+  small {
+  	font-size: 1rem * $augmented-fourth-ratio * $augmented-fourth-ratio * $augmented-fourth-ratio;
+  }
+}
+
+h2 {
+	font-size: 1rem * $augmented-fourth-ratio * $augmented-fourth-ratio * $augmented-fourth-ratio;
+
+	small {
+	  	font-size: 1rem * $augmented-fourth-ratio * $augmented-fourth-ratio;
+	}
+}
+
+h3 {
+	font-size: 1rem * $augmented-fourth-ratio * $augmented-fourth-ratio;
+
+	small {
+	  	font-size: 1rem;
+	}
+}
+
+h4, h5, h6 {
+	font-size: 1rem / $major-second-ratio;
+  letter-spacing: 0.1em;
+
+  small {
+    font-size: 0.9rem / $major-second-ratio;
+    letter-spacing: 0.1em;
+  }
+}
+
+h4 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-weight: 700;
+  text-transform: lowercase;
+  color: $primary-color;
+}
+
+small {
+	font-size: 0.618em;
+}
+
+pre, code {
+  font-size: 1rem;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+*::-webkit-input-placeholder {
+  color: $placeholder-color;
+  font-weight: $font-weight;
+}
+*:-moz-placeholder {
+  color: $placeholder-color;
+  font-weight: $font-weight;
+}
+*::-moz-placeholder {
+  color: $placeholder-color;
+  font-weight: $font-weight;
+}
+*:-ms-input-placeholder {
+  color: $placeholder-color;
+  font-weight: $font-weight;
+}
+	
+::-moz-selection {
+  background: $primary-color;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: $primary-color;
+  color: #fff;
+  text-shadow: none;
+}
+
+
+
+@media print {
+  html {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+}

@@ -20,6 +20,9 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
+        <server name="KERNEL_DIR" value="app/" />
+        <ini name="memory_limit" value="2048M" />
+        <ini name="xdebug.max_nesting_level" value="500" />
     </php>
     <filter>
         <whitelist addUncoveredFilesFromWhitelist="true">

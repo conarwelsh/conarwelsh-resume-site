@@ -21,6 +21,14 @@
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
     </php>
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">app</directory>
+            <exclude>
+                <!-- <directory>app/*/*Bundle/Resources</directory> -->
+            </exclude>
+        </whitelist>
+    </filter>
     <logging>
         <log type="coverage-html" target="build/coverage" />
         <!-- <log type="coverage-xml" target="build/coverage/xml" /> -->

@@ -28,7 +28,12 @@
         <whitelist addUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">app</directory>
             <exclude>
-                <!-- <directory>app/*/*Bundle/Resources</directory> -->
+                <file>app/Console/Kernel.php</file>
+                <file>app/Exceptions/Handler.php</file>
+                <file>app/Http/Controllers/Controller.php</file>
+                <file>app/Jobs/Job.php</file>
+                <file>app/Providers/AppServiceProvider.php</file>
+                <file>app/Console/Kernel.php</file>
             </exclude>
         </whitelist>
     </filter>

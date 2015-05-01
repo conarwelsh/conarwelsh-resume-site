@@ -5,10 +5,12 @@ $app->get('/', function() use ($app) {
 });
 
 $app->post('/contact', function() use ($app) {
-	$data = $app->make('request')->input();
+	$request = $app->make('request');
+	
+	$data = $request->input();
 
-	$data['referrer'] = $_SERVER['HTTP_REFERER'];
-	$data['agent'] = $_SERVER['HTTP_USER_AGENT'];
+	$data['referrer'] = $request->server('HTTP_REFERER', '');
+	$data['agent'] = $request->server('HTTP_USER_AGENT', '');
 
 	$app->make('mailer')->send(
 		[

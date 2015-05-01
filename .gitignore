@@ -1,4 +1,6 @@
 /lumen.log
 /vendor
 /node_modules
+/build
+/.sass-cache
 .env

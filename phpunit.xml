@@ -10,7 +10,7 @@
          stopOnFailure="false"
          syntaxCheck="false">
     <testsuites>
-        <testsuite name="Application Test Suite">
+        <testsuite name="Conarwelsh.com Test Suite">
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>
@@ -20,5 +20,7 @@
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
     </php>
-    <log type="coverage-clover" target="storage/build/clover.xml"/>
+    <logging>
+        <log type="coverage-clover" target="storage/build/clover.xml"/>
+    </logging>
 </phpunit>

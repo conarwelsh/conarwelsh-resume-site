@@ -20,4 +20,5 @@
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
     </php>
+    <log type="coverage-clover" target="storage/build/clover.xml"/>
 </phpunit>

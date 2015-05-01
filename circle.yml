@@ -5,3 +5,7 @@ machine:
 checkout:
   post:
     - mv .env.test .env
+
+test:
+  post:
+    - php vendor/bin/codacycoverage clover

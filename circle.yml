@@ -1,6 +1,6 @@
 general:
   artifacts:
-    - "build/logs/clover.xml"
+    - "build/"
 
 machine:
   php:

@@ -1,6 +1,14 @@
+general:
+  artifacts:
+    - "storage/build/clover.xml"
+
 machine:
   php:
     version: 5.6.5
+
+dependencies:
+  pre:
+    - sed -i 's/^;//' ~/.phpenv/versions/$(phpenv global)/etc/conf.d/xdebug.ini
 
 checkout:
   post:

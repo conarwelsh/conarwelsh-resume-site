@@ -8,7 +8,8 @@
          convertWarningsToExceptions="true"
          processIsolation="false"
          stopOnFailure="false"
-         syntaxCheck="false">
+         syntaxCheck="false"
+         codecoverage="true">
     <testsuites>
         <testsuite name="Conarwelsh.com Test Suite">
             <directory>./tests/</directory>

@@ -9,3 +9,6 @@
 ![Bower Version](https://img.shields.io/bower/v/bootstrap.svg)
 ![NPM Version](https://img.shields.io/npm/v/npm.svg)
 ![Packagist](https://img.shields.io/packagist/v/symfony/symfony.svg)
+
+
+![Github Issues](https://img.shields.io/github/issues/conarwelsh/conarwelsh.com.svg)

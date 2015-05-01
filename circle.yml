@@ -17,3 +17,4 @@ checkout:
 test:
   post:
     - php vendor/bin/codacycoverage clover
+    - ./vendor/bin/test-reporter
